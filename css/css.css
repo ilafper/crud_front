@@ -1,0 +1,226 @@
+body {
+  background: linear-gradient(135deg, #32c7ef, #0078d7);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1%;
+  color: white;
+}
+.boton{
+  display: flex;
+  justify-content: right;
+  margin-right: 4%;
+}
+.añadir{
+  border: 3px solid white;
+  background-color: transparent;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.añadir:hover{
+  transform: scale(1.04); 
+}
+
+.titi{
+  margin-left: 4%;
+  color: white;
+}
+
+
+.lista-predict{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carta {
+  display: flex;
+  align-items: center;
+  background: #0001021f; /* azul-gris oscuro */
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.137);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.carta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.4);
+}
+
+.imgClima {
+  flex: 0 0 100px;
+  margin-right: 16px;
+}
+
+.imagen {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.derec {
+  flex: 1;
+}
+
+.temperatura {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff; /* azul celeste para resaltar */
+  margin-bottom: 8px;
+}
+
+.humedad, .viento {
+  font-size: 0.95rem;
+  color: #ffffff; /* blanco suave */
+  margin: 4px 0;
+}
+
+.botones {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.editar {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn.editar:hover {
+  background-color: #2563eb;
+}
+
+.btn.borrar {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn.borrar:hover {
+  background-color: #b91c1c;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .carta {
+    flex-direction: column;
+    text-align: center;
+  }
+  .imgClima {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
+
+.modalCarta {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+.modal-content {
+  background: #1e293b; /* azul oscuro */
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: #e2e8f0;
+  position: relative;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+
+}
+.izqqq{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content img {
+  width: 120px;
+
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modal-content .cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #e2e8f0;
+}
+
+
+.botones-accion {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.botones-accion button {
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+}
+
+
+.botones-accion img {
+  width: 35px;
+  height: 35px;
+}

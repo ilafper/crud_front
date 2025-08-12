@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PREDDIONES TIEMP</title>
+    <link rel="stylesheet" href="../css/css.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+<section class="imgClima">
+
+</section>
+
+<body>
+    <header>
+        <h1>Predicciones del Tiempo</h1>
+        <p>Gestiona las predicciones meteorológicas de tus ciudades favoritas</p>
+    </header>
+    <section class="boton">
+        <button class="añadir">+ Añadir prediccion</button>
+
+    </section>
+    <h2 class="titi">Lista de predicciones</h2>
+    <section class="lista-predict">
+
+    </section>
+
+    <div class="modalCarta" style="display:none;">
+        <div class="modal-content">
+            <span class="cerrar">&times;</span>
+            <h3>Detalles de la Predicción</h3>
+            <section class="row">
+                <section class="izqqq">
+                    <img src="" alt="" class="modal-imagen" />
+                </section>
+                <section class="info">
+                    <p><strong>Lugar:</strong> <span class="modal-lugar"></span></p>
+                    <p><strong>Fecha - Hora:</strong> <span class="modal-fecha-hora"></span></p>
+                    <p><strong>Descripción:</strong> <span class="modal-descripcion"></span></p>
+                    <p><strong>Temperatura:</strong> <span class="modal-temperatura"></span>°C</p>
+                    <p><strong>Humedad:</strong> <span class="modal-humedad"></span>%</p>
+                    <p><strong>Viento:</strong> <span class="modal-viento"></span> km/h</p>
+                    <p><strong>Prob. Precipitación:</strong> <span class="modal-precipitacion"></span>%</p>
+
+                </section>
+                <section class="botones-accion">
+                    <button class="borrar" title="Borrar">
+                        <img src="../src/basura.png" alt="Borrar" />
+                    </button>
+                    <button  class="editar" title="Editar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-icon lucide-trash"><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    </button>
+                </section>
+            </section>
+
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
