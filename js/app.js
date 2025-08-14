@@ -84,4 +84,39 @@ $(document).ready(function () {
 
     }
     modal();
+
+
+
+
+    function modal2() {
+
+        // Delegar evento click en las cartas
+        $(".añadir").on("click", ".carta", function () {
+            e.preventDefault();
+
+
+            const imagen = $(this).data("imagen");
+            const lugar = $(this).data("lugar");
+            const fechaHora = `${$(this).data("fecha")} - ${$(this).data("hora")}`;
+            const descripcion = $(this).data("descripcion");
+            const temperatura = $(this).data("temperatura");
+            const humedad = $(this).data("humedad");
+            const viento = $(this).data("viento");
+            const precipitacion = $(this).data("precipitacion");
+
+            
+        });
+
+        
+
+        // Cerrar modal si clic fuera del contenido
+        $(".modalCrear").click(function (e) {
+            if ($(e.target).is(".modalCrear")) {
+                $(".modalCrear").fadeOut();
+            }
+        });
+
+
+    }
+    modal2();
 });

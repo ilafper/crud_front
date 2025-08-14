@@ -49,8 +49,14 @@
                     <button class="borrar" title="Borrar">
                         <img src="../src/basura.png" alt="Borrar" />
                     </button>
-                    <button  class="editar" title="Editar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-icon lucide-trash"><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    <button class="editar" title="Editar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-trash-icon lucide-trash">
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                            <path d="M3 6h18" />
+                            <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                        </svg>
                     </button>
                 </section>
             </section>
@@ -58,6 +64,47 @@
 
         </div>
     </div>
+
+    <div class="modalCrear" style="display:none;">
+        <div class="formu-content">
+            <form method="post">
+                <label for="fecha">Lugar:</label><br>
+                <input type="text" id="fecha" name="fecha" required><br><br>
+
+                <label for="hora">Hora:</label><br>
+                <input type="number" id="hora" name="hora" required><br><br>
+
+                <label for="lugar">Mensaje:</label><br>
+                <input id="lugar" name="lugar" rows="4" required><br><br>
+
+                <label for="temperatura">Temperatura:</label><br>
+                <input type="number" id="temperatura" name="temperatura" required><br><br>
+
+                <label for="descripcion">Descripción:</label><br>
+                <textarea name="descripcion" id="descripcion"></textarea><br><br>
+
+                <label for="humedad">Humedad:</label><br>
+                <input type="number" id="humedad" name="humedad" required><br><br>
+
+                <label for="viento">Viento km/H:</label><br>
+                <input type="number" id="viento" name="viento" required><br><br>
+
+                <label for="imagen">Seleccione la imagen:</label><br>
+                <select id="opcion" name="opcion" required>
+                    <option value="">-- Seleccione --</option>
+                    <option value="soleado">Soleado.png</option>
+                    <option value="lluvia">lluvia.png</option>
+                    <option value="nieve">nieve.png</option>
+                    <option value="nublado">nublado.png</option>
+                </select>
+                <button type="submit">Crear</button>
+            </form>
+        </div>
+
+        
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/app.js"></script>
 </body>

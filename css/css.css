@@ -86,13 +86,13 @@ header {
 .temperatura {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ffffff; /* azul celeste para resaltar */
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .humedad, .viento {
   font-size: 0.95rem;
-  color: #ffffff; /* blanco suave */
+  color: #ffffff; 
   margin: 4px 0;
 }
 
