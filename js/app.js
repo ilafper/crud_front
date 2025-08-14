@@ -121,7 +121,7 @@ $(document).ready(function () {
             let humedad = $("#humedad").val();
             let viento = $("#viento").val();
             let opcion = $("#opcion").val();
-
+            let prob_precipitacion=$("#precipitacion").val();
            
             $.ajax({
                 url: "https://crud-api-neon.vercel.app/api/crear",
@@ -134,8 +134,9 @@ $(document).ready(function () {
                     temperatura: temperatura,
                     descripcion: descripcion,
                     humedad: humedad,
-                    viento: viento,
-                    opcion: opcion
+                    viento_kmh: viento,
+                    imagen: opcion,
+                    prob_precipitacion:prob_precipitacion
                 }),
                 success: function (respuesta) {
                     console.log("Datos enviados correctamente:", respuesta);

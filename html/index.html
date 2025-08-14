@@ -89,13 +89,17 @@
                 <label for="viento">Viento km/H:</label><br>
                 <input type="number" id="viento" name="viento" required><br><br>
 
+
+                <label for="precipitacion">Prob Precipitacion:</label><br>
+                <input type="number" id="precipitacion" name="precipitacion" required><br><br>
+
                 <label for="imagen">Seleccione la imagen:</label><br>
                 <select id="opcion" name="opcion" required>
                     <option value="">-- Seleccione --</option>
-                    <option value="soleado.png">Soleado.png</option>
-                    <option value="lluvia.png">lluvia.png</option>
-                    <option value="nieve.png">nieve.png</option>
-                    <option value="nublado.png">nublado.png</option>
+                    <option value="../src/soleado.png">Soleado.png</option>
+                    <option value="../src/lluvia.png">lluvia.png</option>
+                    <option value="../src/nieve.png">nieve.png</option>
+                    <option value="../src/nublado.png">nublado.png</option>
                 </select>
                 <button class="enviarDatos" type="submit">Crear</button>
             </form>
