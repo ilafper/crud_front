@@ -68,11 +68,11 @@
     <div class="modalCrear" style="display:none;">
         <div class="formu-content">
             <form method="post">
-                <label for="fecha">Lugar:</label><br>
-                <input type="text" id="fecha" name="fecha" required><br><br>
+                <label for="fecha">Fecha:</label><br>
+                <input type="date" id="fecha" name="fecha" required><br><br>
 
                 <label for="hora">Hora:</label><br>
-                <input type="number" id="hora" name="hora" required><br><br>
+                <input type="time" id="hora" name="hora" required><br><br>
 
                 <label for="lugar">Mensaje:</label><br>
                 <input id="lugar" name="lugar" rows="4" required><br><br>
@@ -92,12 +92,12 @@
                 <label for="imagen">Seleccione la imagen:</label><br>
                 <select id="opcion" name="opcion" required>
                     <option value="">-- Seleccione --</option>
-                    <option value="soleado">Soleado.png</option>
-                    <option value="lluvia">lluvia.png</option>
-                    <option value="nieve">nieve.png</option>
-                    <option value="nublado">nublado.png</option>
+                    <option value="soleado.png">Soleado.png</option>
+                    <option value="lluvia.png">lluvia.png</option>
+                    <option value="nieve.png">nieve.png</option>
+                    <option value="nublado.png">nublado.png</option>
                 </select>
-                <button type="submit">Crear</button>
+                <button class="enviarDatos" type="submit">Crear</button>
             </form>
         </div>
 

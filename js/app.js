@@ -91,24 +91,13 @@ $(document).ready(function () {
     function modal2() {
 
         // Delegar evento click en las cartas
-        $(".añadir").on("click", ".carta", function () {
+        $(".añadir").on("click", function (e) {
             e.preventDefault();
+            $(".modalCrear").fadeIn();
 
+            $(".modalCrear form")[0].reset();
 
-            const imagen = $(this).data("imagen");
-            const lugar = $(this).data("lugar");
-            const fechaHora = `${$(this).data("fecha")} - ${$(this).data("hora")}`;
-            const descripcion = $(this).data("descripcion");
-            const temperatura = $(this).data("temperatura");
-            const humedad = $(this).data("humedad");
-            const viento = $(this).data("viento");
-            const precipitacion = $(this).data("precipitacion");
-
-            
         });
-
-        
-
         // Cerrar modal si clic fuera del contenido
         $(".modalCrear").click(function (e) {
             if ($(e.target).is(".modalCrear")) {
@@ -116,7 +105,48 @@ $(document).ready(function () {
             }
         });
 
-
     }
     modal2();
+
+    function enviarFormu() {
+        $(".enviarDatos").click(function (e) {
+            e.preventDefault(); // Evita que se recargue la página
+
+            // Obtenemos los valores uno a uno
+            let fecha = $("#fecha").val();
+            let hora = $("#hora").val();
+            let lugar = $("#lugar").val();
+            let temperatura = $("#temperatura").val();
+            let descripcion = $("#descripcion").val();
+            let humedad = $("#humedad").val();
+            let viento = $("#viento").val();
+            let opcion = $("#opcion").val();
+
+           
+            $.ajax({
+                url: "https://crud-api-neon.vercel.app/api/crear",
+                method: "POST",
+                contentType: "application/json", 
+                data: JSON.stringify({
+                    fecha: fecha,
+                    hora: hora,
+                    lugar: lugar,
+                    temperatura: temperatura,
+                    descripcion: descripcion,
+                    humedad: humedad,
+                    viento: viento,
+                    opcion: opcion
+                }),
+                success: function (respuesta) {
+                    console.log("Datos enviados correctamente:", respuesta);
+                    $(".modalCrear").fadeOut();
+                    $(".modalCrear form")[0].reset();
+                },
+                error: function (err) {
+                    console.error("Error al enviar los datos:", err);
+                }
+            });
+        });
+    }
+    enviarFormu();
 });
